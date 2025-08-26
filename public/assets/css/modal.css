@@ -1,0 +1,58 @@
+.modal-container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+.modal-body {
+  background: #fff;
+  z-index: 100000;
+  border-radius: 5px;
+  border: none;
+  max-width: 500px;
+  padding: 2rem;
+  margin: auto;
+}
+
+.modal-container-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: #fff;
+  padding: 0;
+  color: rgba(94, 172, 244, 0.7);
+}
+
+button,
+button:hover,
+button:active,
+button:focus {
+  outline: 0;
+}
+
+dialog::backdrop {
+  background-color: #2d2d2daa;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-container {
+    padding-top: 100px; /* Location of the box */
+  }
+  .modal-body {
+    padding: 10px;
+    max-width: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
