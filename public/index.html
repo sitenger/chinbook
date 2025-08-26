@@ -1151,36 +1151,29 @@
           </div>
 
           <div class="form">
-            <form
-              action="forms/contact.php"
-              method="post"
-              role="form"
-              class="php-email-form"
-            >
+            <form class="contact-form">
               <div class="form-row">
-                <div class="col-md-6 form-group">
+                <div class="col form-group">
                   <input
                     type="text"
-                    name="name"
+                    name="username"
                     class="form-control"
-                    id="name"
-                    placeholder="Your Name"
+                    id="username"
+                    placeholder="Ваше имя"
                     data-rule="minlen:4"
                     data-msg="Please enter at least 4 chars"
                   />
-                  <div class="validate"></div>
                 </div>
-                <div class="col-md-6 form-group">
+                <div class="col form-group">
                   <input
                     type="email"
                     class="form-control"
                     name="email"
                     id="email"
-                    placeholder="Your Email"
-                    data-rule="email"
+                    placeholder="Ваш Email"
+                    required="true"
                     data-msg="Please enter a valid email"
                   />
-                  <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
@@ -1189,32 +1182,29 @@
                   class="form-control"
                   name="subject"
                   id="subject"
-                  placeholder="Subject"
+                  placeholder="Тема сообщения"
                   data-rule="minlen:4"
                   data-msg="Please enter at least 8 chars of subject"
                 />
-                <div class="validate"></div>
               </div>
               <div class="form-group">
                 <textarea
                   class="form-control"
                   name="message"
                   rows="5"
-                  data-rule="required"
-                  data-msg="Please write something for us"
-                  placeholder="Message"
+                  id="message"
+                  placeholder="Сообщение"
+                  required="true"
                 ></textarea>
-                <div class="validate"></div>
               </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit">Send Message</button>
+
+              <div class="text-center mt-4 mb-3">
+                <input
+                  type="submit"
+                  class="send-btn"
+                  value="Отправить сообщение"
+                  id="send-btn"
+                />
               </div>
             </form>
           </div>
@@ -1344,5 +1334,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/subscribe.js"></script>
   </body>
 </html>
